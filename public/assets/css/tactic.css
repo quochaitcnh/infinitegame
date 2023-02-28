@@ -1,0 +1,170 @@
+.line_tactics {
+    position: relative;
+    height: 388px;
+    width: 100%;
+}
+
+.style_of_play .title,
+.line_tactics .title {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.line_tactics .field {
+    position: absolute;
+    top: 73px;
+    left: 15px;
+    width: 218px;
+    height: 295px;
+    background: url(../images/tactics/line_tactics_field.png) center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.line_tactics .line_fw {
+    position: absolute;
+    top: 67px;
+    left: 233px;
+    right: 0px;
+    height: 90px;
+    border-bottom: 1px solid rgb(26, 40, 51, 0.5);
+    box-shadow: 0px 1px 0px rgb(82 82 82);
+}
+
+.line_tactics .subtitle {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 0;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: center;
+    color: #87bae0;
+}
+
+.line_tactics .line_fw .carrousel {
+    position: absolute;
+    top: -67px;
+    left: -233px;
+    height: 250px;
+}
+
+.line_tactics .line_fw .carrousel>div.option_1 {
+    background: url(../images/tactics/line_fw_1.png) center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.line_tactics .line_fw .carrousel>div.option_2 {
+    background: url(../images/tactics/line_fw_2.png) center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.line_tactics .line_fw .carrousel>div.option_3 {
+    background: url(../images/tactics/line_fw_3.png) center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.line_tactics .line_mf .carrousel>div.option_1 {
+    background: url(../images/tactics/line_mf_1.png) center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.line_tactics .line_mf .carrousel>div.option_2 {
+    background: url(../images/tactics/line_mf_2.png) center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.line_tactics .line_mf .carrousel>div.option_3 {
+    background: url(../images/tactics/line_mf_3.png) center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.line_tactics .line_df .carrousel>div.option_1 {
+    background: url(../images/tactics/line_df_1.png) center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.line_tactics .line_df .carrousel>div.option_2 {
+    background: url(../images/tactics/line_df_2.png) center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.line_tactics .line_df .carrousel>div.option_3 {
+    background: url(../images/tactics/line_df_3.png) center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.line_tactics .labels {
+    top: 35px;
+}
+
+.labels {
+    position: absolute;
+    left: 66px;
+    right: 66px;
+    top: 76px;
+}
+
+.line_tactics .right_arrow_yellow,
+.line_tactics .left_arrow_yellow {
+    top: 33px;
+}
+
+.right_arrow_yellow,
+.left_arrow_yellow {
+    position: absolute;
+    width: 40px;
+    height: 43px;
+    cursor: pointer;
+}
+
+.right_arrow_yellow::before,
+.left_arrow_yellow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transform: skewX(-15deg);
+    transform: skewX(-15deg);
+    border-radius: 8px 0;
+    background: rgb(218, 151, 3);
+    background: -moz-linear-gradient(top, rgba(218, 151, 3, 1) 0%, rgba(209, 114, 0, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(218, 151, 3, 1) 0%, rgba(209, 114, 0, 1) 100%);
+    background: linear-gradient(to bottom, rgba(218, 151, 3, 1) 0%, rgba(209, 114, 0, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#da9603', endColorstr='#d17200', GradientType=0);
+}
+
+.right_arrow_yellow span,
+.left_arrow_yellow span {
+    position: absolute;
+    left: 0px;
+    right: 8px;
+    top: 10px;
+    color: #0c0404;
+    font-size: 18px;
+    line-height: 27px;
+    white-space: nowrap;
+    text-align: center;
+    font-weight: 700;
+    z-index: 1;
+    transform: scaleY(2);
+}
+
+.right_arrow_yellow::after,
+.left_arrow_yellow::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 6px;
+    bottom: 0;
+    -webkit-transform: skewX(-15deg);
+    transform: skewX(-15deg);
+    border-radius: 8px 0;
+    background: rgb(249, 214, 1);
+    background: -moz-linear-gradient(top, rgba(249, 214, 1, 1) 0%, rgba(238, 160, 0, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(249, 214, 1, 1) 0%, rgba(238, 160, 0, 1) 100%);
+    background: linear-gradient(to bottom, rgba(249, 214, 1, 1) 0%, rgba(238, 160, 0, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9d601', endColorstr='#eea000', GradientType=0);
+}

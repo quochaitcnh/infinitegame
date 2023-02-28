@@ -1,0 +1,439 @@
+:root {
+    --heavy-blue: #1E364B;
+    --heavy-blue-v2: #1B3A52;
+    --light-blue: #6B9BC7;
+    --green: #09AC1F;
+    --light-green: #58CE78;
+    --blue: #058AFF;
+    --main-color: #FE41E4;
+}
+
+html {
+    font-size: 10px;
+}
+
+@media screen and (max-width: 349px) {
+
+    /* For Tablets */
+    html {
+        font-size: 2px;
+    }
+}
+
+@media screen and (min-width: 350px) {
+
+    /* For Tablets */
+    html {
+        font-size: 4px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+
+    /* For Tablets */
+    html {
+        font-size: 6px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    /* For Laptops */
+    html {
+        font-size: 8px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    /* For Large Laptops */
+    html {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+
+    /* For Big TV's (HD Screens)  */
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+
+    /* For Big TV's (HD Screens)  */
+    html {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+
+    /* For Projectors or Higher Resolution Screens (Full HD) */
+    html {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 3840px) {
+
+    /* For 4K Displays (Ultra HD) */
+    html {
+        font-size: 40px;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Black bison';
+    src: url("../fonts/Black Bison.otf");
+}
+
+@font-face {
+    font-family: 'TekoSemiBold';
+    src: url('../fonts/TekoSemiBold.ttf');
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+.wrapper {
+    background: url("../images/pages/home/bg.png") no-repeat center;
+    background-size: 100% 100%;
+    object-fit: cover;
+    height: 100vh;
+}
+
+.wrapper .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #fff;
+}
+
+.nav-home {
+    background: rgba(0, 0, 0, 0.16);
+    border: 0.2rem solid rgba(255, 255, 255, 0.28);
+    border-bottom: 0;
+    backdrop-filter: blur(19px);
+    border-radius: 4rem 4rem 0 0;
+    bottom: 0;
+    position: absolute;
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    z-index: 999;
+}
+
+.nav-home .logo {
+    margin-left: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+
+.nav-home .logo a,
+.nav-home .logo a img {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.nav-home nav {
+    width: 100%;
+}
+
+.nav-home ul.nav {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+}
+
+a.nav-link {
+    font-family: 'Black bison';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3.1rem;
+    color: #FFFFFF;
+    text-shadow: 1rem -1rem 2rem rgb(255 255 255 / 50%);
+    position: relative;
+    text-decoration: none;
+}
+
+a.nav-link::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: -0.5rem;
+    background: var(--main-color);
+    box-shadow: 0 -0.5rem 2.6rem var(--main-color);
+    height: 0.2rem;
+    width: 0;
+    transition: 0.3s;
+    transform: translateX(-50%);
+}
+
+.nav-item:hover a.nav-link::before {
+    width: 100%;
+}
+
+a.nav-link.active::before {
+    width: 100%;
+}
+
+a.nav-link.icon-play.active::before {
+    width: 0;
+}
+
+a.nav-link.icon-play {
+    text-shadow: 1rem -1rem 2rem var(--main-color);
+}
+
+a.nav-link i.fa-solid.fa-play {
+    color: var(--main-color);
+}
+
+.image-game {
+    width: fit-content;
+    position: absolute;
+    right: 15rem;
+    bottom: -1rem;
+    width: 75%;
+}
+
+.image-game img {
+    width: 100%;
+}
+
+.box-info-game {
+    background: linear-gradient(270.11deg, var(--main-color) -19.36%, rgba(254, 65, 228, 0.476042) 32.65%, rgba(11, 13, 27, 0) 99.93%);
+    backdrop-filter: blur(0.5px);
+    width: fit-content;
+    position: absolute;
+    right: 0;
+    bottom: 10rem;
+}
+
+.title-game {
+    font-family: 'Black bison';
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 9rem;
+    letter-spacing: 0.175em;
+    color: rgba(255, 255, 255, 0.99);
+    backdrop-filter: blur(3.0661px);
+}
+
+.des-game {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 2.5rem;
+    color: #FFFFFF;
+}
+
+.des-game span.des-game-bold {
+    font-family: 'Black bison';
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 3.8rem;
+    color: #FFFFFF;
+}
+
+.left-home {
+    margin-left: 3rem;
+    padding-top: 4rem;
+    z-index: 5;
+    position: relative;
+}
+
+.box-user {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.box-user .avatar {
+    width: 6rem;
+    height: 6rem;
+}
+
+.box-user .avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+.box-user .info-user {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem
+}
+
+.box-user .name-user {
+    font-family: 'Black bison';
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: #FFFFFF;
+}
+
+.box-user .type-user {
+    background: #02FE1B;
+    border-radius: 0.5rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.35rem;
+    line-height: 1.5rem;
+    color: #000000;
+    padding: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.box-user .reward-user {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.box-user .image-reward {
+    width: 3rem;
+    height: 4.25rem;
+}
+
+.box-user .image-reward img {
+    width: 100%;
+    height: 100%;
+}
+
+.box-user .quantity-reward {
+    font-family: 'Black bison';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #FFFFFF;
+}
+
+.box-main {
+    margin-top: 5rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.box-main .image-main {
+    width: 12rem;
+    height: 12rem;
+    position: relative;
+    border: 0.25rem solid var(--main-color);
+    padding: 0.5rem;
+}
+
+.box-main .image-main img {
+    width: 100%;
+    height: 100%;
+}
+
+.box-main .text-main {
+    position: absolute;
+    bottom: 0;
+    width: fit-content;
+    height: fit-content;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 1rem;
+    backdrop-filter: blur(0.2rem);
+}
+
+.box-main .title-main {
+    font-family: 'Black bison';
+    font-size: 1rem;
+    line-height: 3rem;
+    letter-spacing: 0.135em;
+    color: #FFFFFF;
+}
+
+.box-main .des-main {
+    font-family: 'Black bison';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    letter-spacing: 0.7rem;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.box-main .action-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.box-main .action-main a {
+    text-decoration: none;
+}
+
+.box-main .play-main {
+    font-family: 'Black bison';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 5rem;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+}
+
+.box-main .btn-play-game {
+    margin-left: 0.2rem;
+    color: var(--main-color);
+    text-shadow: 0 0.4rem 1.5rem var(--main-color);
+}
+
+.box-main .chapter-main,
+.box-main .chapter-name-main {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #FFFFFF;
+}
+
+.box-main .done-main {
+    font-family: 'Black bison';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: var(--main-color);
+    letter-spacing: 0.35rem;
+}
+
+.list-card {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}

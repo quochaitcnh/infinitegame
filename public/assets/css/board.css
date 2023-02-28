@@ -1,0 +1,311 @@
+.stage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    perspective-origin: 50% -28rem;
+    /* -200px*/
+    perspective: 73rem;
+    /* 1100px*/
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.world {
+    position: absolute;
+    /* top: 8rem; */
+    /* 130px*/
+    /* left: 50%; */
+    /* margin-left: -50%; */
+    width: 100%;
+    /*width: 45rem;*/
+    /* 672px*/
+    height: 56rem;
+    /* 840px*/
+    transform: translateZ(-14rem);
+    /* -210px*/
+    transform-style: preserve-3d;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: 1s ease;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 6rem;
+    bottom: 0;
+}
+
+.world.flipped {
+    transform: translateZ(-14rem) rotateY(180deg);
+    /* -210px*/
+}
+
+.world.flipped .card-item {
+    transform: rotateY(180deg);
+}
+
+.world.flipped .team.js-team {
+    transform: translateZ(-10rem);
+}
+
+.world.switched {
+    /* transform: translateZ(25rem) rotateY(30deg) translateX(6rem) translateY(-20rem); */
+    transform: translateZ(14rem) rotateY(30deg) translateX(2rem) translateY(-20rem);
+}
+
+.world.switched.flipped {
+    /* transform: translateZ(25rem) rotateY(150deg) translateX(6rem) translateY(-20rem); */
+    transform: translateZ(14rem) rotateY(150deg) translateX(2rem) translateY(-20rem);
+}
+
+.terrain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: inherit;
+}
+
+.field {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    z-index: 2;
+    transform: rotateX(90deg) translateZ(0);
+    transform-origin: 50% 50%;
+    box-sizing: content-box;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.field--alt {
+    display: block;
+    width: 80%;
+    left: 10%;
+    transform: rotateX(90deg) translateZ(-10px);
+    background: #000;
+    opacity: 0.3;
+    box-shadow: 0 0 40px 30px #000;
+}
+
+.field__texture {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+}
+
+.field__texture.field__texture--gradient {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
+    z-index: 4;
+}
+
+.flipped .field__texture.field__texture--gradient {
+    opacity: 0;
+}
+
+.field__texture.field__texture--gradient-b {
+    opacity: 0;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
+    z-index: 4;
+}
+
+.flipped .field__texture.field__texture--gradient-b {
+    opacity: 1;
+}
+
+.texture .field__texture.field__texture--grass {
+    background-image: url("../images/element/grass2.png");
+    background-repeat: repeat;
+    background-size: 7.5rem 7.5rem;
+    background-position: -2rem -2rem;
+    filter: hue-rotate(0deg);
+}
+
+.field__side {
+    position: absolute;
+    top: 28rem;
+    left: 0;
+    width: 100%;
+    height: 0.8rem;
+    transform: rotateX(180deg) translateZ(-28rem);
+    transform-origin: 50% 50%;
+    background-color: #f7f7f7;
+    z-index: 9;
+}
+
+.texture .field__side {
+    background-color: #000;
+}
+
+.texture .field__side:after {
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    opacity: 0.55;
+    background-image: url("../images/element/mud.png");
+    background-repeat: repeat;
+    background-size: 75px 75px;
+    background-position: -20px -20px;
+}
+
+.field__side.field__side--left,
+.field__side.field__side--right {
+    top: 0;
+    left: -0.8rem;
+    height: 100%;
+    width: 0.8rem;
+    transform-origin: 100% 50%;
+    transform: rotateX(90deg) rotateY(-90deg) translateZ(0);
+}
+
+.field__side.field__side--right {
+    left: auto;
+    right: 0;
+}
+
+.field__side.field__side--back {
+    transform: rotateX(180deg) translateZ(28rem);
+}
+
+.field__line {
+    position: absolute;
+    width: 100%;
+    height: 0.3rem;
+    z-index: 4;
+}
+
+.field__line--goal {
+    width: 16%;
+    height: 6%;
+    border: solid 0.3rem rgba(255, 255, 255, 0.5);
+    border-bottom: none;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 4%;
+}
+
+.field__line--goal--far {
+    top: 4%;
+    bottom: auto;
+    border: solid 0.3rem rgba(255, 255, 255, 0.5);
+    border-top: none;
+}
+
+.field__line--penalty-arc {
+    width: 20%;
+    height: 20%;
+    overflow: hidden;
+    bottom: 20%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.field__line--penalty-arc:after {
+    position: absolute;
+    top: 75%;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    content: ' ';
+    display: block;
+    border-radius: 50% 50% 0 0;
+    border: solid 0.3rem rgba(255, 255, 255, 0.5);
+    border-bottom: none;
+    box-sizing: border-box;
+}
+
+.field__line--penalty-arc--far {
+    bottom: auto;
+    top: 20%;
+}
+
+.field__line--penalty-arc--far:after {
+    bottom: 75%;
+    top: auto;
+    border: solid 0.3rem rgba(255, 255, 255, 0.5);
+    border-top: none;
+    border-radius: 0 0 50% 50%;
+}
+
+.field__line--penalty {
+    width: 44%;
+    height: 16%;
+    border: solid 0.3rem rgba(255, 255, 255, 0.5);
+    border-bottom: none;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 4%;
+}
+
+.field__line--penalty--far {
+    top: 4%;
+    bottom: auto;
+    border: solid 0.3rem rgba(255, 255, 255, 0.5);
+    border-top: none;
+}
+
+.field__line--outline {
+    width: 92%;
+    height: 92%;
+    top: 4%;
+    left: 4%;
+    border: solid 0.3rem rgba(255, 255, 255, 0.5);
+}
+
+.field__line--mid {
+    top: 50%;
+    width: 92%;
+    left: 4%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.field__line--circle {
+    width: 20%;
+    height: 20%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: solid 0.3rem rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+}
+
+/* Team */
+.team {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.list-fw {
+    transform: translateZ(-10rem) translateX(0px) translateY(13rem);
+}
+
+.list-mf {
+    transform: translateZ(5rem) translateX(0px) translateY(3rem);
+}
+
+.list-df {
+    transform: translateZ(16rem) translateX(0px) translateY(-7rem);
+}
+
+.list-gk {
+    transform: translateZ(27rem) translateX(0px) translateY(-17rem);
+}

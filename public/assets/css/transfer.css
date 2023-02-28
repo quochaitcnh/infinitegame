@@ -1,0 +1,433 @@
+.home-team {
+    display: flex;
+    flex-direction: column;
+}
+
+.player-item {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+@media screen and (max-width: 349px) {
+
+    /* For Tablets */
+    body.game-page .right-main-content * {
+        --size-card: 5rem;
+    }
+
+    body.game-page .right-main-content .right-main-player * {
+        --size-card: 10rem;
+    }
+
+    .stat {
+        width: 30rem;
+        height: 30rem;
+    }
+}
+
+@media screen and (min-width: 350px) {
+
+    /* For Tablets */
+    body.game-page .right-main-content * {
+        --size-card: 5rem;
+    }
+
+    body.game-page .right-main-content .right-main-player * {
+        --size-card: 10rem;
+    }
+
+    .stat {
+        width: 40rem;
+        height: 40rem;
+    }
+}
+
+@media screen and (min-width: 600px) {
+
+    /* For Tablets */
+    body.game-page .right-main-content * {
+        --size-card: 5rem;
+    }
+
+    body.game-page .right-main-content .right-main-player * {
+        --size-card: 10rem;
+    }
+
+    .stat {
+        width: 30rem;
+        height: 30rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    /* For Laptops */
+    body.game-page .right-main-content * {
+        --size-card: 5rem;
+    }
+
+    body.game-page .right-main-content .right-main-player * {
+        --size-card: 10rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    /* For Large Laptops */
+    body.game-page .right-main-content * {
+        --size-card: 5rem;
+    }
+
+    body.game-page .right-main-content .right-main-player * {
+        --size-card: 10rem;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+
+    /* For Big TV's (HD Screens)  */
+    body.game-page .right-main-content * {
+        --size-card: 5rem;
+    }
+
+    body.game-page .right-main-content .right-main-player * {
+        --size-card: 10rem;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+
+    /* For Big TV's (HD Screens)  */
+    body.game-page .right-main-content * {
+        --size-card: 5rem;
+    }
+
+    body.game-page .right-main-content .right-main-player * {
+        --size-card: 10rem;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+
+    /* For Projectors or Higher Resolution Screens (Full HD) */
+    body.game-page .right-main-content * {
+        --size-card: 5rem;
+    }
+
+    body.game-page .right-main-content .right-main-player * {
+        --size-card: 10rem;
+    }
+
+    .stat {
+        width: 20rem;
+        height: 20rem;
+    }
+}
+
+@media screen and (min-width: 3840px) {
+
+    /* For 4K Displays (Ultra HD) */
+    body.game-page .right-main-content * {
+        --size-card: 5rem;
+    }
+
+    body.game-page .right-main-content .right-main-player * {
+        --size-card: 10rem;
+    }
+}
+
+.player-item {
+    position: relative;
+    height: 5.5rem;
+    border-radius: 0.8rem;
+    box-shadow: inset 0rem -0.1rem #2d3540;
+    background: rgb(26, 40, 51);
+    background: -moz-linear-gradient(top, rgba(26, 40, 51, 1) 0%, rgba(19, 25, 31, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(26, 40, 51, 1) 0%, rgba(19, 25, 31, 1) 100%);
+    background: linear-gradient(to bottom, rgba(26, 40, 51, 1) 0%, rgba(19, 25, 31, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1a2833', endColorstr='#13191f', GradientType=0);
+}
+
+.avatar-player {
+    width: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.position-player-wrapper {
+    position: relative;
+    background: rgb(17, 21, 24);
+    -webkit-transform: skewX(-15deg);
+    transform: skewX(-15deg);
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-position {
+    width: fit-content;
+    height: fit-content;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1rem;
+    text-align: center;
+    font-family: 'TekoSemiBold';
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+}
+
+.player-position.gk {
+    color: #0a1019;
+    background: rgb(239, 210, 100);
+    background: -moz-linear-gradient(top, rgba(239, 210, 100, 1) 0%, rgba(144, 124, 58, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(239, 210, 100, 1) 0%, rgba(144, 124, 58, 1) 100%);
+    background: linear-gradient(to bottom, rgba(239, 210, 100, 1) 0%, rgba(144, 124, 58, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#efd264', endColorstr='#907c3a', GradientType=0);
+    box-shadow: 0px 1px 2px rgb(0 0 0 / 50%);
+}
+
+.player-position.df {
+    color: #0a1019;
+    background: rgb(88, 145, 191);
+    background: -moz-linear-gradient(top, rgba(88, 145, 191, 1) 0%, rgba(53, 87, 115, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(88, 145, 191, 1) 0%, rgba(53, 87, 115, 1) 100%);
+    background: linear-gradient(to bottom, rgba(88, 145, 191, 1) 0%, rgba(53, 87, 115, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5891bf', endColorstr='#355773', GradientType=0);
+    box-shadow: 0px 1px 2px rgb(0 0 0 / 50%);
+}
+
+.player-position.mf {
+    color: #0a1019;
+    background: rgb(92, 183, 128);
+    background: -moz-linear-gradient(top, rgba(92, 183, 128, 1) 0%, rgba(53, 110, 76, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(92, 183, 128, 1) 0%, rgba(53, 110, 76, 1) 100%);
+    background: linear-gradient(to bottom, rgba(92, 183, 128, 1) 0%, rgba(53, 110, 76, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb780', endColorstr='#356e4c', GradientType=0);
+    box-shadow: 0px 1px 2px rgb(0 0 0 / 50%);
+}
+
+.player-position.fw {
+    color: #0a1019;
+    background: rgb(228, 109, 111);
+    background: -moz-linear-gradient(top, rgba(228, 109, 111, 1) 0%, rgba(152, 74, 73, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(228, 109, 111, 1) 0%, rgba(152, 74, 73, 1) 100%);
+    background: linear-gradient(to bottom, rgba(228, 109, 111, 1) 0%, rgba(152, 74, 73, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e46d6f', endColorstr='#984a49', GradientType=0);
+    box-shadow: 0px 1px 2px rgb(0 0 0 / 50%);
+}
+
+.name-player {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    font-family: 'TekoSemiBold';
+    font-size: 1.5rem;
+}
+
+.power-player {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: -0.5rem;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.power-player.rate0 {
+    background: #162028;
+    color: #fff;
+}
+
+.power-player.rate1 {
+    background: rgb(9, 219, 46);
+    color: #039c0a;
+}
+
+.power-player.rate2 {
+    background: rgb(9 64 219);
+    color: #180776;
+}
+
+.power-player.rate3 {
+    background: rgb(167 9 219);
+    color: #6a0776;
+}
+
+.power-player.rate4 {
+    background: rgb(255, 152, 0);
+    color: #ad5200;
+}
+
+.power-player.rate5 {
+    background: rgb(219 9 38);
+    color: #7c0707;
+}
+
+/* Main Player */
+.main-player {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.info-main-player {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.left-main-player {
+    display: flex;
+    gap: 1rem;
+}
+
+.position-main-player {
+    border-left: 0.5rem solid #af1616;
+    color: #fff;
+    font-family: 'TekoSemiBold';
+    font-weight: 700;
+    font-size: 2rem;
+    height: fit-content;
+    padding: 0rem 0.5rem;
+}
+
+.name-main-player {
+    color: #fff;
+    font-family: 'Black bison';
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.power-main-player {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+}
+
+.power-item .name-power {
+    color: #fff;
+    font-family: 'Black bison';
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.power-item .num-power {
+    color: #fff;
+    font-family: 'TekoSemiBold';
+    font-weight: 400;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.center-main-player {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.radar-stat-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+canvas#radarChartPlayer {
+    display: block;
+    box-sizing: border-box;
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 0;
+}
+
+div#radarChartPlayer {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    height: fit-content;
+}
+
+#radarChartPlayer .main-svg {
+    background: transparent !important;
+}
+
+#radarChartPlayer .plotbg path {
+    fill: none !important;
+}
+
+#radarChartPlayer .apexcharts-toolbar,
+#radarChartPlayer .apexcharts-tooltip {
+    display: none !important;
+}
+
+.apexcharts-radar-series.apexcharts-plot-series {}
+
+#radarChartPlayer .apexcharts-yaxis text {
+    font-size: 1rem;
+}
+
+#radarChartPlayer .apexcharts-datalabel {
+    font-size: 0.5rem;
+    display: none;
+}
+
+#radarChartPlayer .apexcharts-yaxis text {
+    font-size: 0.3rem;
+}
+
+#radarChartPlayer circle {
+    stroke-width: 0.05rem;
+    r: 0.3rem;
+    stroke: #fff;
+    fill: #008ffb;
+}
+
+#radarChartPlayer line {
+    stroke-width: 0.1rem;
+}
+
+.apexcharts-radar-series.apexcharts-plot-series line,
+.apexcharts-radar-series.apexcharts-plot-series polygon {
+    stroke: #7cef64cc;
+    /* stroke: #02FE1B; */
+    stroke-width: 0.1rem;
+}
+
+.apexcharts-series path {
+    /* stroke: #7cef64cc; */
+    stroke: #008ffbcc;
+    stroke-width: 0.1rem;
+    fill: #008ffb4d;
+}
+
+.stat {
+    position: absolute;
+    /* left: 0;
+    right: 0;
+    margin: auto;
+    top: 0; */
+}
