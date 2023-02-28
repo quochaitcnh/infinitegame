@@ -1,0 +1,37 @@
+.cus-btn-bg {
+    --border-color: black;
+    --border: 0.25rem;
+    /* filter: drop-shadow(1px 0px 0px var(--border-color)) drop-shadow(-1px 0px 0px var(--border-color)) drop-shadow(0px 1px 0px var(--border-color)) drop-shadow(0px -1px 0px var(--border-color)) drop-shadow(1px 1px 0px var(--border-color)) drop-shadow(-1px -1px 0px var(--border-color)) drop-shadow(-1px 1px 0px var(--border-color)) drop-shadow(1px -1px 0px var(--border-color)); */
+    filter: drop-shadow(0.3rem 0.3rem 0rem var(--border-color)) drop-shadow(-0.05rem 0rem 0rem var(--border-color)) drop-shadow(0rem 0.05rem 0rem var(--border-color)) drop-shadow(0rem -0.05rem 0rem var(--border-color)) drop-shadow(0.05rem 0.05rem 0rem var(--border-color)) drop-shadow(-0.05rem -0.05rem 0rem var(--border-color)) drop-shadow(0.1rem 0.1rem 0rem var(--border-color)) drop-shadow(0.15rem -0.05rem 0rem var(--border-color));
+}
+
+.cus-btn-text {
+    color: black;
+    margin: 1rem;
+    font-family: 'Black bison', sans-serif;
+    font-size: 1rem;
+}
+
+.cus-btn {
+    background: #FFFF00;
+    --path: 15% 0, 100% 0, 100% 65%, 85% 100%, 0 100%, 0 35%;
+    -webkit-clip-path: polygon(var(--path));
+    clip-path: polygon(var(--path));
+    width: fit-content;
+    min-width: 9rem;
+    padding: 0.5rem 1rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.cus-btn-text:hover {
+    color: #FFFF00;
+}
+
+.cus-btn:hover {
+    background: var(--main-color);
+}

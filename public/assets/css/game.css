@@ -1,0 +1,36 @@
+.group-main-content {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.left-main-content {
+    margin-left: 1rem;
+    padding-top: 4rem;
+    z-index: 5;
+    position: relative;
+    width: 30%;    
+}
+
+.center-main-content {
+    padding-top: 4rem;
+    z-index: 5;
+    position: relative;
+    width: 40%;
+}
+
+.right-main-content {
+    padding-top: 4rem;
+    padding-right: 1rem;
+    z-index: 5;
+    position: relative;
+    width: 30%;
+}
+
+.game-page .list-card {
+    margin-top: 2rem;
+    display: flex;
+    gap: 0;
+    justify-content: space-evenly;
+}

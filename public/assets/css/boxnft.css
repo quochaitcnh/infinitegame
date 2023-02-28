@@ -1,0 +1,234 @@
+/* .sunburst {
+    content: '';
+    position: absolute;
+    top: 250px;
+    left: -125px;
+    right: -125px;
+    bottom: -250px;
+    background: url(../images/misc/pack-sunburst.png) center / contain no-repeat;
+    animation: loader_rotating 15s linear infinite;
+    -webkit-animation: loader_rotating 15s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes loader_rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+} */
+
+.boxnft-group {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    height: 600px;
+}
+
+.cardpack, .sunburst {
+    transform: scale(0.8);
+}
+
+.cardpack {
+    width: 388px;
+    height: 652px;
+    position: absolute !important;
+}
+
+.cardpack.pack_bronze {
+    top: -5rem;
+    left: -25rem;
+    right: 0px;
+    margin: auto;
+}
+
+.cardpack.pack_silver {
+    top: -2.5rem;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+
+.cardpack.pack_gold {
+    top: 0px;
+    left: 0px;
+    right: -25rem;
+    margin: auto;
+}
+
+
+
+.cardpack .upper {
+    position: absolute;
+    top: 0;
+    left: 9px;
+    width: 374px;
+    height: 66px;
+    z-index: 2;
+}
+
+.cardpack .lower {
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    width: 374px;
+    height: 66px;
+    z-index: 2;
+}
+
+.cardpack.pack_bronze .upper {
+    background: url(../images/packs/bronze-top.png) no-repeat;
+}
+
+.cardpack.pack_bronze .lower {
+    background: url(../images/packs/bronze-bottom.png) no-repeat;
+}
+
+.cardpack.pack_silver .upper {
+    background: url(../images/packs/silver-top.png) no-repeat;
+}
+
+.cardpack.pack_silver .lower {
+    background: url(../images/packs/silver-bottom.png) no-repeat;
+}
+
+.cardpack.pack_gold .upper {
+    background: url(../images/packs/gold-top.png) no-repeat;
+}
+
+.cardpack.pack_gold .lower {
+    background: url(../images/packs/gold-bottom.png) no-repeat;
+}
+
+.cardpack .label {
+    position: absolute;
+    bottom: 62px;
+    left: 19px;
+    width: 356px;
+    height: 528px;
+    z-index: 3;
+    white-space: nowrap;
+}
+
+.cardpack .label .label_packtype {
+    font-size: 42px;
+    line-height: 48px;
+    position: absolute;
+    top: 30px;
+    left: 3px;
+    width: 330px;
+    transform: skewY(-5.5deg) scaleY(1.1);
+    -webkit-transform: skewY(-5.5deg) scaleY(1.1);
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #d8f5ff;
+    text-shadow: 0 2px 1px rgb(26 83 140 / 60%);
+    text-align: center;
+}
+
+.cardpack .label .label_pack {
+    font-size: 21px;
+    line-height: 48px;
+    position: absolute;
+    top: 70px;
+    left: 239px;
+    width: 90px;
+    transform: skewY(-5.5deg) scaleY(1.1);
+    -webkit-transform: skewY(-5.5deg) scaleY(1.1);
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #d5e5ed;
+    text-shadow: 0 2px 1px rgb(0 0 0 / 80%);
+    text-align: center;
+}
+
+.cardpack .label .label_includes {
+    font-size: 21px;
+    line-height: 26px;
+    position: absolute;
+    top: 456px;
+    left: 170px;
+    width: 180px;
+    color: #fff;
+    font-weight: 400;
+    text-shadow: 0 2px 1px rgb(0 0 0 / 60%);
+    text-align: center;
+}
+
+.cardpack .label .label_cardcount {
+    font-size: 26px;
+    line-height: 32px;
+    position: absolute;
+    top: 480px;
+    left: 170px;
+    width: 180px;
+    color: #87bae0;
+    font-weight: 700;
+    text-shadow: 0 2px 1px rgb(0 0 0 / 60%);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.cardpack .label .stars_from {
+    position: absolute;
+    top: 459px;
+    left: 24px;
+}
+
+.hstars_1 {
+    background: url(../images/misc/card-pack-star.png);
+    width: 18px;
+    height: 18px;
+}
+
+.hstars_2 {
+    background: url(../images/misc/card-pack-star.png);
+    width: 36px;
+    height: 18px;
+}
+
+.hstars_3 {
+    background: url(../images/misc/card-pack-star.png);
+    width: 54px;
+    height: 18px;
+}
+
+.hstars_4 {
+    background: url(../images/misc/card-pack-star.png);
+    width: 72px;
+    height: 18px;
+}
+
+.hstars_5 {
+    background: url(../images/misc/card-pack-star.png);
+    width: 90px;
+    height: 18px;
+}
+
+.hstars_6 {
+    background: url(../images/misc/card-pack-star.png);
+    width: 108px;
+    height: 18px;
+}
+
+.cardpack .label .stars_hyphen {
+    position: absolute;
+    top: 471px;
+    left: 26px;
+    color: #ceab5d;
+    font-size: 28px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.cardpack .label .stars_to {
+    position: absolute;
+    top: 489px;
+    left: 24px;
+}

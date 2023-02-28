@@ -1,0 +1,294 @@
+/* .card-background {
+    display: none;
+} */
+
+/* .card-animation {
+    transform: scale(.5859375);
+    width: 256px;
+    height: 256px;
+    position: absolute;
+    background-position: 0px 0px;
+    left: -54px;
+    top: -54px;
+} */
+
+.card-animation {
+    width: 256px;
+    height: 256px;
+    position: absolute;
+    background-position: 0px 0px;
+    background-size: auto;
+}
+
+.infoplayer {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+@keyframes anicard {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: -15360px;
+    }
+}
+
+@media screen and (max-width: 349px) {
+
+    /* For Tablets */
+    body.home-page * {
+        --size-card: 24px;
+    }
+
+    body.game-page .center-main-content * {
+        --size-card: 8rem;
+    }
+}
+
+@media screen and (min-width: 350px) {
+
+    /* For Tablets */
+    body.home-page * {
+        --size-card: 32px;
+    }
+
+    body.game-page .center-main-content * {
+        --size-card: 8rem;
+    }
+}
+
+@media screen and (min-width: 600px) {
+
+    /* For Tablets */
+    body.home-page * {
+        --size-card: 48px;
+    }
+
+    body.game-page .center-main-content * {
+        --size-card: 8rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    /* For Laptops */
+    body.home-page * {
+        --size-card: 64px;
+    }
+
+    body.game-page .center-main-content * {
+        --size-card: 8rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    /* For Large Laptops */
+    body.home-page * {
+        --size-card: 80px;
+    }
+
+    body.game-page .center-main-content * {
+        --size-card: 8rem;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+
+    /* For Big TV's (HD Screens)  */
+    body.home-page * {
+        --size-card: 96px;
+    }
+
+    body.game-page .center-main-content * {
+        --size-card: 8rem;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+
+    /* For Big TV's (HD Screens)  */
+    body.home-page * {
+        --size-card: 144px;
+    }
+
+    body.game-page .center-main-content * {
+        --size-card: 8rem; /* 128px */
+    }
+}
+
+@media screen and (min-width: 1920px) {
+
+    /* For Projectors or Higher Resolution Screens (Full HD) */
+    body.home-page * {
+        --size-card: 176px;
+    }
+
+    body.game-page .center-main-content * {
+        --size-card: 8rem;
+    }
+}
+
+@media screen and (min-width: 3840px) {
+
+    /* For 4K Displays (Ultra HD) */
+    body.home-page * {
+        --size-card: 352px;
+    }
+
+    body.game-page .center-main-content * {
+        --size-card: 8rem;
+    }
+}
+
+.imgmarketmain {
+    animation: up-down 3s infinite alternate;
+}
+
+@keyframes up-down {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(1rem);
+    }
+}
+
+.powerplayer {
+    font-family: TekoSemiBold;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    text-transform: uppercase;
+    top: 2%;
+    left: 23%;
+}
+
+.positionplayer {
+    font-family: TekoSemiBold;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    text-transform: uppercase;
+    top: 25%;
+    left: 21.5%;
+    width: 19%;
+}
+
+.nameplayer {
+    font-family: TekoSemiBold;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    top: 62%;
+    left: 0;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.plusplayer {
+    font-family: TekoSemiBold;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    top: 78%;
+    text-align: center;
+}
+
+.plusplayer {
+    font-family: TekoSemiBold;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    top: 78%;
+    text-align: center;
+}
+
+.player_card {
+    /* position: absolute; */
+    top: 0;
+    bottom: 0;
+    /* margin: auto; */
+    left: 0;
+    right: 0;
+    height: fit-content;
+}
+
+.player_card::after {
+    content: '';
+    position: absolute;
+    width: 35%;
+    height: 2rem;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 1);
+    z-index: -1;
+    filter: blur(1rem);
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -2.5rem;
+}
+
+.flagplayer {
+    position: absolute;
+    top: 45%;
+    left: 22%;
+    width: 16%;
+}
+
+.flagplayer img {
+    width: 100%;
+}
+
+/* CSS card ani size */
+
+.card-animation, .card-background {
+    width: var(--size-card);
+    height: var(--size-card);
+    position: absolute;
+    background-position: 0px 0px;
+    background-size: auto var(--size-card);
+}
+
+@keyframes anicard {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: calc(var(--size-card) * (-60));
+    }
+}
+
+.infoplayer {
+    position: relative;
+    width: var(--size-card);
+    height: var(--size-card);
+}
+
+.card-player {
+    width: var(--size-card);
+}
+
+.powerplayer {
+    font-size: calc(var(--size-card) / 4);
+}
+
+.nameplayer {
+    font-size: calc(var(--size-card) / 6);
+}
+
+.positionplayer,
+.plusplayer {
+    font-size: calc(var(--size-card) / 8);
+}
+
+/* End CSS card ani size */

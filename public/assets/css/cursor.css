@@ -1,0 +1,128 @@
+.cursor {
+    z-index: 9999;
+    position: fixed;
+}
+
+.cursor .click-animation {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cursor .click-animation .shape {
+    position: absolute;
+    opacity: 0;
+}
+
+/* Circles */
+.cursor .click-animation .shape.circle.big {
+    width: 4rem;
+    height: 4rem;
+    border: 0.2rem solid #4fb4f8;
+    border-radius: 50%;
+}
+
+.cursor .click-animation .shape.circle.small {
+    width: 2rem;
+    height: 2rem;
+    border: 0.1rem solid #2ca8fa;
+    border-radius: 50%;
+}
+
+.cursor.active .click-animation .shape.circle {
+    animation: click-animation-circle 3s ease-out infinite;
+}
+
+@keyframes click-animation-circle {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+        transform: scale(3);
+    }
+}
+
+/* Triangle */
+.cursor .click-animation .shape.triangle.yellow {
+    border-style: solid;
+    border-width: 0 0.5rem 1rem 0.5rem;
+    border-color: transparent transparent #f9de2d transparent;
+}
+
+.cursor.active .click-animation .shape.triangle.yellow {
+    animation: click-animation-triangle-yellow 3s ease-out infinite;
+}
+
+.cursor .click-animation .shape.triangle.green {
+    border-style: solid;
+    border-width: 0 0.35rem 0.7rem 0.35rem;
+    border-color: transparent transparent #47eda0 transparent;
+}
+
+.cursor.active .click-animation .shape.triangle.green {
+    animation: click-animation-triangle-green 3s ease-out infinite;
+}
+
+@keyframes click-animation-triangle-yellow {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+        transform: scale(2.5) translate(5rem, -5rem) rotate(360deg);
+    }
+}
+
+@keyframes click-animation-triangle-green {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+        transform: scale(2.5) translate(2rem, 5rem) rotate(360deg);
+    }
+}
+
+/* Disc */
+.cursor .click-animation .shape.disc {
+    width: 0.85rem;
+    height: 0.85rem;
+    background: #d563f8;
+    border-radius: 50%;
+}
+
+.cursor.active .click-animation .shape.disc {
+    animation: click-animation-disc 3s ease-out infinite;
+}
+
+@keyframes click-animation-disc {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+        transform: scale(2) translate(-7rem, -3rem);
+    }
+}
